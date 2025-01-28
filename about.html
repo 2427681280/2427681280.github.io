@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>夏成辉的个人简介</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+             /* 新增照片容器样式 */
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 40px; /* 与右侧内容保持间距 */
+            width: 240px; /* 容器宽度与证件照一致 */
+        }
+
+        /* 调整证件照样式 */
+        .id-photo {
+            width: 200px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 15px; /* 与按钮保持间距 */
+        }
+
+        /* 按钮样式优化 */
+        .resume-button {
+            padding: 12px 30px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+            width: 180px; /* 与证件照宽度匹配 */
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .resume-button:hover {
+            background: #1976D2;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部个人信息 -->
+   <!-- 修改后的profile-section部分 -->
+ <div class="profile-section">
+        <div class="photo-container">
+            <img src="images/id-photo.jpg" alt="一寸照片" class="id-photo">
+            <button class="resume-button">查看完整简历</button>
+        </div>
+        <div class="intro">
+        <h1>夏成辉</h1>
+        <h2>湖北工业大学 机器人工程专业</h2>
+        
+        <!-- 核心技能矩阵 -->
+        <div class="skill-matrix">
+            <div class="skill-category">
+                <h3>机械设计与制造技术</h3>
+                <ul>
+                    <li><strong>工业级三维设计体系：</strong>SOLIDWORKS（CSWP认证）、AutoCAD Mechanical、ArtCAM，累计完成200+精密机械部件建模</li>
+
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>智能电气系统开发能力</h3>
+                <ul>
+                    <li><strong>嵌入式硬件：</strong>6层高密度PCB设计（嘉立创EDA），高速信号完整性</li>
+                    <li><strong>工业自动化：</strong>TIA Portal平台开发S7-1200/1500 PLC系统，产线物联网化改造</li>
+                    <li><strong>功率电子：</strong>5kW级电机驱动电路设计，通过热仿真与应力测试验证</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>嵌入式系统开发专长</h3>
+                <ul>
+                    <li><strong>ARM开发：</strong>基于STM32/ESP32实现μC/OS-III实时操作系统移植</li>
+                    <li><strong>工业通信：</strong>Modbus RTU/TCP、CANopen协议栈开发实施</li>
+                    <li><strong>传感器融合：</strong>多模态传感器（IMU/视觉/激光）数据融合算法开发</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>工程实验与系统集成</h3>
+                <ul>
+                    <li><strong>实验室能力：</strong>4通道示波器信号分析，BGA封装焊接与返修工艺</li>
+                    <li><strong>智能系统集成：</strong>伺服电机+机器视觉+工业物联网智能装配系统开发</li>
+                    <li><strong>故障诊断：</strong>Python自动化测试脚本开发，硬件故障定位效率提升70%</li>
+                </ul>
+            </div>
+
+            <div class="language-skills">
+                <h3>语言与工程素养</h3>
+                <ul>
+                    <li>工程技术英语（CET-4 480）：翻译5万字技术文档，中美联合研发项目技术对接</li>
+                    <li>持续跟踪ASME/IEC标准更新，设计符合ISO 9001质量体系</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- 荣誉列表 -->
+    <div class="honors-section">
+        <h2>个人荣誉</h2>
+        <ul class="awards-list">
+            <li data-certificate="images/cert-1.jpg">
+                2024 第十一届全国大学生机械创新设计大赛全国二等奖
+            </li>
+            <li data-certificate="images/cert-2.jpg">
+                2024 第二十六届中国机器人及人工智能大赛全国一等奖
+            </li>
+            <li data-certificate="images/cert-10.jpg">
+               2024中国大学生机械工程创新创意大赛全国一等奖
+            </li>
+            <li data-certificate="images/cert-3.jpg">
+                2024 睿抗机器人开发者大赛全国二等奖
+            </li>
+            <li data-certificate="images/cert-4.jpg">
+                2024 ROBOCON颗粒归仓主题赛全国三等奖
+            </li>
+            <li data-certificate="images/cert-5.jpg">
+                2024 ROBOCON颗粒归仓竞技赛（操作挑战赛）全国二等奖
+            </li>
+            <li data-certificate="images/cert-6.jpg">
+                2024ROBOCON颗粒归仓竞技赛（编程挑战赛）全国三等奖
+            </li>
+            <li data-certificate="images/cert-7.jpg">
+               2024ROBOCON仿生足式机器人挑战赛（室内障碍）全国二等奖
+            </li>
+            <li data-certificate="images/cert-8.jpg">
+                2024ROBOCON仿生足式机器人挑战赛（室内竞速）全国三等奖
+            </li>
+            <li data-certificate="images/cert-9.jpg">
+               2024ROBOCON仿生足式机器人挑战赛（室外越野）全国三等奖
+            </li>
+        </ul>
+    </div>
+
+    <!-- 证书弹窗 -->
+    <div id="certModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="certImage">
+    </div>
+
+    <script>
+        // 新增简历按钮交互
+        document.querySelector('.resume-button').addEventListener('click', function() {
+            document.getElementById('certImage').src = 'images/resume.jpg'; // 请确保此图片路径正确
+            document.getElementById('certModal').style.display = "block";
+        });
+        // 显示证书弹窗
+        document.querySelectorAll('.awards-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('certImage').src = item.dataset.certificate;
+                document.getElementById('certModal').style.display = "block";
+            });
+        });
+
+        // 关闭弹窗
+        document.querySelector('.close').addEventListener('click', () => {
+            document.getElementById('certModal').style.display = "none";
+        });
+    </script>
+</body>
+</html>

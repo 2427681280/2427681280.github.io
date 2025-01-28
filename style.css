@@ -1,0 +1,331 @@
+/* 通用样式 */
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* 首页样式 */
+/* 新增封面专属样式 */
+.welcome-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 1.5rem 0;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    margin-bottom: 5rem;
+}
+
+.deco-line {
+    width: 50px;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+}
+
+.welcome-bar h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* 图片与按钮间距 */
+}
+
+.button-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.cta-button {
+    margin-top: 0; /* 移除原有上边距 */
+    padding: 1rem 3rem; /* 加宽按钮 */
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2); /* 添加基础阴影 */
+}
+
+/* 新增按钮定位微调 */
+.cta-button i {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(5px); /* 悬停时箭头右移 */
+}
+
+/* 移动端适配优化 */
+@media (max-width: 768px) {
+    .hero-section {
+        gap: 30px;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 2.2rem;
+        font-size: 0.95em;
+    }
+}
+
+.photo-frame {
+    position: relative;
+    width: 382px;
+    height: 604px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.photo-frame:hover {
+    transform: translateY(-10px);
+}
+
+.main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.dynamic-border {
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    animation: borderFlow 6s infinite linear;
+}
+
+@keyframes borderFlow {
+    0% { clip-path: polygon(0 0, 0 0, 0 0, 0 0); }
+    25% { clip-path: polygon(0 0, 100% 0, 0 0, 0 0); }
+    50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0); }
+    75% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    margin-top: 3rem;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.cta-button:hover:before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+    transform: translateY(-3px);
+}
+
+.bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(52, 152, 219, 0.05) 0%, transparent 60%);
+    z-index: -1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .welcome-bar h1 {
+        font-size: 1.2rem;
+    }
+    
+    .photo-frame {
+        width: 250px;
+        height: 375px;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 2rem;
+    }
+}
+/* 详情页样式 */
+.profile-section {
+    display: flex;
+    align-items: flex-start; /* 顶部对齐 */
+    gap: 40px; /* 图片与简介间距 */
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.id-photo {
+    width: 150px; /* 适当放大照片尺寸 */
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* 添加柔和阴影 */
+    object-fit: cover; /* 防止照片变形 */
+    margin-top: 15px; /* 与标题对齐 */
+}
+
+
+.intro h1 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+/* 新增CSS样式 */
+.intro h2 {
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+.skill-matrix {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.skill-category {
+    margin-bottom: 25px;
+    border-left: 3px solid #3498db;
+    padding-left: 15px;
+}
+
+.skill-category h3 {
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    position: relative;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 0.95em;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category li:before {
+    content: "▹";
+    color: #3498db;
+    position: absolute;
+    left: 0;
+}
+
+.language-skills {
+    background: #e3f2fd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+/* 荣誉列表 */
+.awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-list li {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #3498db;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.awards-list li:hover {
+    background: #f0f8ff;
+}
+
+/* 证书弹窗 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    display: block;
+    border: 3px solid white;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* 添加到style.css保证响应式布局 */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap; /* 移动端自动换行 */
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    .photo-container {
+        margin-right: 0;
+        width: 100%;
+    }
+    .id-photo {
+        margin: 0 auto 15px;
+    }
+    .resume-button {
+        margin: 0 auto 30px;
+    }
+}
